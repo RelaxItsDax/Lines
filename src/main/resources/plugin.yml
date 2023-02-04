@@ -1,0 +1,5 @@
+name: Lines
+version: '${project.version}'
+main: me.relaxitsdax.lines.Lines
+api-version: 1.19
+description: Lines
