@@ -19,7 +19,7 @@ public class TestListener implements Listener {
             Location loc1 = player.getTargetBlock(null, 10).getLocation();
 
 
-            new DrawStraightLine().drawLine1(loc1, player.getEyeLocation(), Particle.FLAME);
+            new DrawStraightLine().drawLine1(loc1, player.getEyeLocation(), Particle.CRIT_MAGIC);
         }
     }
 }
