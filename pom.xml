@@ -39,7 +39,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <outputDirectory>D:\MC\Servers\Line\plugins</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
