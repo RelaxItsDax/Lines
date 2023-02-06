@@ -39,7 +39,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>D:\MC\Servers\Line\plugins</outputDirectory>
+                            <outputDirectory>D:\Minecraft\Lines Test\plugins</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

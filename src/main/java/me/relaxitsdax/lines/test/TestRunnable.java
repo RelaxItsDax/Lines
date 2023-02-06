@@ -14,6 +14,7 @@ import static java.lang.Math.sin;
 
 public class TestRunnable {
 
+    /*
     public void startTheCube(World world, double r) {
         int t = new Control().getT();
         double t1 = Math.toRadians(t);
@@ -59,5 +60,7 @@ public class TestRunnable {
 
 
     }
+
+     */
 
 }

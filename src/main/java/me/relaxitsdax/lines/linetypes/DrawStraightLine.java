@@ -21,7 +21,7 @@ public class DrawStraightLine {
 
         double c = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2) + Math.pow(deltaZ, 2));
 
-        int divisions = (int) Math.round(c / 0.3);
+        int divisions = (int) Math.round(c / (0.3));
 
         for (int i = 1; i < divisions; i++) {
             world.spawnParticle(particle, new Location(world, loc1.getX() + (deltaX) * i / divisions, loc1.getY() + (deltaY) * i / divisions, loc1.getZ() + (deltaZ) * i / divisions), 1, 0, 0, 0, 0);
