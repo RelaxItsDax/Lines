@@ -22,22 +22,24 @@ public class Control {
     public void startControl(Player player) {
         World world = player.getWorld();
         double r = 5;
-        int vertices = 10;
+        int vertices = 4;
         new BukkitRunnable() {
             @Override
             public void run() {
+
+                //int vertices = (int) 1 + Math.round(t / 20);
 
                 Location loc = player.getLocation();
 
                 if (vertices != 0) {
                     for (int i = 0; i < vertices; i++) {
                         //loc.getWorld().spawnParticle(Particle.CRIT_MAGIC, loc.getX() + cos(Math.toRadians(t + i * 120)), loc.getY() + 1 + sin(Math.toRadians(t)), loc.getZ() + sin(Math.toRadians(t + i * 120)), 1, 0, 0, 0, 0);
-                        //new DrawStraightLine().drawLine1(new Location(world, loc.getX() + 4 * cos(Math.toRadians(t + (i + 1) * 360 / vertices)), loc.getY() + 1 + sin(Math.toRadians(t)), loc.getZ() + 4 * sin(Math.toRadians(t + (i + 1) * 360 / vertices))), new Location(world, loc.getX() + 4 * cos(Math.toRadians(t + i * 360 / vertices)), loc.getY() + 1 + sin(Math.toRadians(t)), loc.getZ() + 4 * sin(Math.toRadians(t + i * 360 / vertices))), Particle.FLAME);
+                        new DrawStraightLine().drawLine1(new Location(world, loc.getX() + 4 * cos(Math.toRadians(t + (i + 1) * 360 / vertices)), loc.getY(), loc.getZ() + 4 * sin(Math.toRadians(t + (i + 1) * 360 / vertices))), new Location(world, loc.getX() + 4 * cos(Math.toRadians(t + i * 360 / vertices)), loc.getY(), loc.getZ() + 4 * sin(Math.toRadians(t + i * 360 / vertices))), Particle.FLAME);
                     }
                 }
+                //new DrawCircle().drawEllipse1(loc, 5, 10, 1 + cos(Math.toRadians((t))), 1 + sin(Math.toRadians((t))), Particle.FLAME);
 
-
-                new DrawCircle().drawCircle2(loc, 4 * (cos(Math.toRadians(t)) + 2), 10, Particle.FLAME);
+                //new DrawCircle().drawCircle2(loc, 4 * (cos(Math.toRadians(t)) + 2), 10, Particle.FLAME);
 
 
 
@@ -57,29 +59,6 @@ public class Control {
                     }
                 }
                 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 if (t == 360) {
                     t = -1;
                 }

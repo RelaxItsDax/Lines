@@ -44,8 +44,28 @@ public class DrawCircle {
         }
     }
 
+    public void drawEllipse1(Location loc, double rad, int scalar, double stretchX, double stretchY, Particle particle) {
+        int points = (int) Math.round(rad) * scalar;
+
+        for (int i = 0; i < points; i++) {
+
+            Location pointLoc = new Location(loc.getWorld(),
+                    loc.getX() + rad * stretchX * Math.cos(i * 2 * Math.PI / points),
+                    loc.getY(),
+                    loc.getZ() + rad * stretchY * Math.sin(i * 2 * Math.PI / points));
+
+            loc.getWorld().spawnParticle(particle, pointLoc, 1, 0, 0, 0, 0);
+
+        }
+    }
 
     public void drawArc(Location loc, double radius, double startDeg, double stopDeg, int scalar, Particle particle) {
+
+        if(radius <= 0) {
+            loc.getWorld().spawnParticle(particle, loc, 1, 0, 0, 0, 0);
+            return;
+        }
+
 
         startDeg = Math.toRadians(startDeg);
         stopDeg = Math.toRadians(stopDeg);
