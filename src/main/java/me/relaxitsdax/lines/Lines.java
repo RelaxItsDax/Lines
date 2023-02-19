@@ -14,8 +14,6 @@ public final class Lines extends JavaPlugin {
 
         INSTANCE = this;
 
-        new Control().startControl();
-
     }
 
     @Override
